@@ -1,15 +1,5 @@
 package labassignment;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- * This program implements the bounded buffer using shared memory. Note that
- * this solutions is NOT thread-safe. It will be used to illustrate thread
- * safety using Java synchronization in Chapter 7.
- */
 import java.util.*; // for the Arraylist
 
 public class UnboundedBuffer implements Buffer {
@@ -28,8 +18,8 @@ public class UnboundedBuffer implements Buffer {
     // producer calls this method
     public void insert(Object item) {
         // add an item to the buffer
-        buffer.add(item);
-        count++; // since I'm usig ArrayList as unbounded buffer 
+        buffer.add( item );
+        count+=1; // since I'm usig ArrayList as unbounded buffer 
         // So I use the varible "count" to select the last index producer fill
         // It will help on consuming 
         System.out.println("Producer Entered " + item);
@@ -38,7 +28,7 @@ public class UnboundedBuffer implements Buffer {
     public Object remove() {
         Object item;
 
-        while (true) {
+        while (true) { // infinite loop until the condition terminate it
             // The loop will end when consumer did FIRST consumed 
             if (count == -1) { // which mean its empty
                 continue;
