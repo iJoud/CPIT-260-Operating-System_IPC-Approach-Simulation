@@ -20,7 +20,7 @@ public class LabAssignment {
             choice = scan.nextInt(); // variable to get user choice 
             // In case user didn't choose correct choice, keep asking him to enter a valid number 
             if (choice != 1 && choice != 2 && choice != 3) {
-                System.out.print("Wrong choice number, Retry again!\n");
+                System.out.print("Wrong choice number, "+"\nRetry again!\n");
             } else {
                 break loop1; // and go to simulate the choosen approache
             }
