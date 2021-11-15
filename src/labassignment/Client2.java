@@ -1,14 +1,5 @@
 package labassignment;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- * Client program requesting current date from server.
- *
- */
 import java.net.*;
 import java.io.*;
 import java.util.*;
@@ -33,7 +24,7 @@ public class Client2 implements Runnable {
             {
                 System.out.println(line);
             }
-            System.out.println("--Client2 end---");// to make the output Clear
+            System.out.println("--- Client2 end ---");// to make the output Clear
 
         } catch (IOException ioe) {
             System.err.println(ioe);
