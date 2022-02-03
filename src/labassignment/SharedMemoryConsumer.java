@@ -17,12 +17,10 @@ public class SharedMemoryConsumer implements Runnable {
     }
 
     public void run() {
-        // String variable because producer will only produce String
-        String message;
             // consume an item from the buffer
             System.out.println("Consumer wants to consume.");
             // read from buffer
-            message = (String) buffer.remove();
+           String message = (String) buffer.remove();
     }
 
     private Buffer buffer;
